@@ -63,8 +63,10 @@ class MainActivity : AppCompatActivity() {
     )
     private var currentDessert = allDesserts[0]
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         Timber.i("onCreate called")
 
         // Use Data Binding to get reference to the views
@@ -84,10 +86,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.i("MainActivity", "onStart Called")
 
+        Timber.i("onStart Called")
     }
-
     override fun onResume() {
         super.onResume()
         Timber.i("onResume Called")
@@ -112,7 +113,6 @@ class MainActivity : AppCompatActivity() {
         super.onRestart()
         Timber.i("onRestart Called")
     }
-
     /**
      * Updates the score when the dessert is clicked. Possibly shows a new dessert.
      */
